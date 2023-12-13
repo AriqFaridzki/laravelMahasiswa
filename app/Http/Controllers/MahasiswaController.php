@@ -48,8 +48,8 @@ class MahasiswaController extends Controller
      */
     public function show(string $mahasiswaID)
     {
-        $mahasiswa = Mahasiswa::findOrFail($mahasiswaID);
-        return view('mahasiswaView.show', compact('mahasiswa'));
+        $mhs = Mahasiswa::findOrFail($mahasiswaID);
+        return view('mahasiswaView.show', compact('mhs'));
     }
 
     /**
@@ -57,8 +57,8 @@ class MahasiswaController extends Controller
      */
     public function edit(string $mahasiswaID)
     {
-        $mahasiswa = Mahasiswa::findOrFail($mahasiswaID);
-        return view('mahasiswaView.edit', compact($mahasiswa));
+        $mhs = Mahasiswa::findOrFail($mahasiswaID);
+        return view('mahasiswaView.edit', compact('mhs'));
     }
 
     /**
@@ -76,7 +76,7 @@ class MahasiswaController extends Controller
 
         $mahasiswa->update($request->all());
 
-        return redirect()->route('mahasiwaView.index')
+        return redirect()->route('mahasiswaView.index')
             ->with('success', 'Mahasiswa data updated Successfully');
     }
 

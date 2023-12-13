@@ -7,7 +7,7 @@
                 <h2>CRUD Operasi di Laravel 10</h2>
             </div>
             <div class="pull-right">
-                <a href="{{ route('mahasiswaView.index')}}" class="btn btn-primary">Back</a>
+                <a href="{{ route('mahasiswaView.create')}}" class="btn btn-primary">Create New Mahasiswa Data</a>
             </div>
         </div>
     </div>
